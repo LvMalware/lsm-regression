@@ -274,6 +274,13 @@ namespace regression
 
             virtual
             numericType
+            getB()
+            {
+                return exp(coefB);
+            }
+
+            virtual
+            numericType
             evaluate(numericType x)
             {
                 return exp(coefB) * exp(coefA * x);
@@ -308,6 +315,13 @@ namespace regression
             {
                 Linear::findCoefficients();
                 //coefB = exp(coefB);
+            }
+
+            virtual
+            numericType
+            getB()
+            {
+                return exp(coefB);
             }
 
             virtual
